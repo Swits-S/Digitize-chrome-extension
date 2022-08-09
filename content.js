@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(
         //used for debugging
         //console.log("vibe check passed");
         if (request.greeting === "hello")
-            sendResponse({farewell: window.location.href});
+            sendResponse({farewell: [window.location.href,document.title]});
        return true;
     }
 );

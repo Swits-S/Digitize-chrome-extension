@@ -5,7 +5,7 @@ function getvalue(){
             chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
                 //used for debugging
                 // console.log(response.farewell);
-                var openurl = 'https://classroom.google.com/share?url=' + response.farewell;
+                var openurl = 'https://classroom.google.com/share?url=' + response.farewell[0]+ '&title=' + response.farewell[1];
                 window.open(openurl, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
 
             });

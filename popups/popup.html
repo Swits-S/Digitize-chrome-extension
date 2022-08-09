@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src = "popup.js"></script>
+    <title>Digitize options</title>
+</head>
+
+<div class="panel topheading">
+    <img src="../assets/icon48.png" width="48" height="48" alt="">
+    <h1>Digitize Options</h1>
+    <div id="debug">
+        Version: 1.0<span class="info" id="ver"></span>
+    </div>
+</div>
+
+<div class="panel">
+    <h2>Google Classroom language</h2>
+    <select id="language">
+        <option value="en_GB">English (GB)</option>
+        <option value="en_US">English (US)</option>
+        <option value="en_AU">English (AU)</option>
+        <option value="es_ES">Español</option>
+        <option value="sv_SE">Svenska</option>
+    </select>
+    <h2>Default Digitize language</h2>
+    <select id="dist_language">
+        <option value="">Project default</option>
+        <option value="en_GB">English (GB)</option>
+        <option value="en_US">English (US)</option>
+        <option value="en_AU">English (AU)</option>
+        <option value="es_ES">Español</option>
+        <option value="sv_SE">Svenska</option>
+    </select>
+
+    <div class="save">
+        <button id="save">Save</button>
+        <span id="status">&nbsp;</span>
+    </div>
+    <div id="btn">
+        <button id="share">
+            <span id="buttontext">Share to classroom</span>
+            <img src="../assets/light.png" width="50px"height=50px id="classpic">
+        </button>
+        <script src = "popup.js"></script>
+        <!--<script id="script" src="popup.js"></script>-->
+    </div>
+</div>
+</html>

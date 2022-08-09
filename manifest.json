@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Classroom menu extension",
+  "version": "2",
+  "content_scripts": [
+    {
+      "matches":[
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+
+  ],
+  "background":{
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "assets/icon32.png",
+    "default_popup": "popups/popup.html",
+    "default_title": "Pop up will be here"
+  }
+
+
+
+}

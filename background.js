@@ -1,4 +1,4 @@
-console.log("background is vibing");
+console.log("background is running");
 
 chrome.action.onClicked.addListener(buttonClicked);
 

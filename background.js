@@ -2,10 +2,11 @@ console.log("background is vibing");
 
 chrome.action.onClicked.addListener(buttonClicked);
 
-function buttonClicked(tab){
+function buttonClicked(){
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
-            console.log(response.farewell);
+            //used for debugging
+            //console.log(response.farewell);
         });
     });
 }

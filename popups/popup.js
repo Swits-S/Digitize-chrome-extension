@@ -16,9 +16,20 @@ function getvalue(){
 //debugging function
 function testing(){
     console.log("testing");
+    chrome.tabs.getCurrent(clkd);
+    function clkd(){
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, {greeting: "testing"}, function(response) {
+                //used for debugging
+                console.log(response.farewell);
+            });
+        });
+    }
+
 }
 
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("share").addEventListener('click',getvalue);
+    document.getElementById("save").addEventListener('click', testing);
 });

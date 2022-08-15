@@ -1,3 +1,7 @@
+/**
+ * It gets the current tab, sends a message to the content script, and then opens a new tab with the response from the
+ * content script
+ */
 function getvalue(){
     chrome.tabs.getCurrent(btnClikd);
     function btnClikd(){
@@ -13,6 +17,11 @@ function getvalue(){
     }
 }
 
+/**
+ * The function testing() is called when the user clicks the extension icon. The function then sends a message to the
+ * content script, which is then sent to the background script. The background script then sends a message back to the
+ * content script, which is then sent back to the extension
+ */
 //debugging function
 function testing(){
     console.log("testing");
@@ -29,6 +38,9 @@ function testing(){
 }
 
 
+/* Adding an event listener to the DOM. When the DOM is loaded, it will add an event listener to the share and save
+buttons. When the share button is clicked, it will call the getvalue() function. When the save button is clicked, it
+will call the testing() function. */
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("share").addEventListener('click',getvalue);
     document.getElementById("save").addEventListener('click', testing);

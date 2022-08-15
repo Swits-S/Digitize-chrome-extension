@@ -1,11 +1,17 @@
 console.log("extension is good!");
 
+/* This is a function that waits for the page to load, then waits 2 seconds, then adds an event listener to the "create"
+button in the toolbar. */
 window.addEventListener('load',() => {
     setTimeout(function(){
         //do what you need here
         document.getElementsByClassName("VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe LQeN7 GjZJab bDxw8b")[0].addEventListener("click",run());
     }, 2000);
 });
+
+/**
+ * creates a new button in the Google classroom toolbar
+ */
 function run(){
     //var gogle = document.getElementsByClassName('VfPpkd-StrnGf-rymPhb DMZ54e');
     var lis = document.createElement("li");
@@ -30,6 +36,7 @@ function run(){
 
 }
 
+/* This is a listener that listens for messages from the background script. */
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         //used for debugging

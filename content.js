@@ -1,5 +1,3 @@
-console.log("extension is good!");
-
 /* This is a function that waits for the page to load, then waits 2 seconds, then adds an event listener to the "create"
 button in the toolbar. */
 window.addEventListener('load',() => {
@@ -8,6 +6,7 @@ window.addEventListener('load',() => {
         document.getElementsByClassName("VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe LQeN7 GjZJab bDxw8b")[0].addEventListener("click",run());
     }, 2000);
 });
+
 
 /**
  * creates a new button in the Google classroom toolbar
@@ -34,10 +33,7 @@ function run(){
     lis.appendChild(spans4);
     document.getElementsByClassName('VfPpkd-StrnGf-rymPhb DMZ54e')[0].appendChild(lis);
     document.getElementById("Digitize_button").addEventListener('click',function DigiClckd(){
-        console.log("testing");
         window.open("https://www.youtube.com/watch?v=9Tl3OmwrSaM", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-
-        console.log("complete");
     });
 
 }

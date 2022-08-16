@@ -18,15 +18,6 @@ function getvalue(){
 }
 
 
-chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-        if (request.color === "pinged") {
-            console.log("recieved");
-            sendResponse({farewell: "done"});
-        }
-    }
-);
-
 /**
  * The function testing() is called when the user clicks the extension icon. The function then sends a message to the
  * content script, which is then sent to the background script. The background script then sends a message back to the

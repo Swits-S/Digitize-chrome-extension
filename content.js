@@ -33,6 +33,12 @@ function run(){
     lis.appendChild(spans2);
     lis.appendChild(spans4);
     document.getElementsByClassName('VfPpkd-StrnGf-rymPhb DMZ54e')[0].appendChild(lis);
+    document.getElementById("Digitize_button").addEventListener('click',function DigiClckd(){
+        console.log("testing");
+        window.open("https://www.youtube.com/watch?v=9Tl3OmwrSaM", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+
+        console.log("complete");
+    });
 
 }
 
@@ -43,17 +49,7 @@ chrome.runtime.onMessage.addListener(
         //console.log("vibe check passed");
         if (request.greeting === "hello")
             sendResponse({farewell: [window.location.href,document.title]});
-        if (request.greeting === "loaded")
-            console.log("made it");
-
-
-
-            sendResponse({farewell: "testing confirmed"});
        return true;
     }
 );
-
-
-document.getElementById("Digitize_button").addEventListener('click',DigiClckd());
-
 
